@@ -1,0 +1,10 @@
+admin:
+  email: "the_boss@my_offic.es"
+  password_digest: "$2a$10$Ua36a1Mzjx3SmwvOSzak3OJepBiW7NShdw1G90TeC9TBXriGcjvPi"
+  # password: "1"
+  admin: true
+
+plain:
+  email: "just_a_guy@my_offic.es"
+  password_digest: "$2a$10$Ua36a1Mzjx3SmwvOSzak3OJepBiW7NShdw1G90TeC9TBXriGcjvPi"
+  # password: "1"
