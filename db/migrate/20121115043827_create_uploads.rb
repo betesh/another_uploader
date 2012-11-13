@@ -3,9 +3,9 @@ class CreateUploads < ActiveRecord::Migration
     create_table :uploads do |t|
       t.integer :creator_id
       t.string :name
-      t.string :caption
+      t.string :caption, limit: 1000
       t.text :description
-      t.boolean :is_public
+      t.boolean :is_public, default: true
       t.integer :uploadable_id
       t.string :uploadable_type
       t.string :width
