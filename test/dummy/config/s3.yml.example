@@ -1,0 +1,21 @@
+# Save this in your main application as config/initializers/s3.yml and update the values below appropriately.
+# It's recommended to add that file to .gitignore for security
+# host_alias may be omitted if you're not redirecting from your website to S3 with a CNAME
+test:
+  bucket: test_bucket
+  host_alias: test_bucket.s3.amazon.com
+  credentials:
+    access_key_id: 4DVQZMCFEZWVXTL73PD6
+    secret_access_key: dReL6mrQDKdfstjevFeBOqHprhO9PC38GN5GtVYS
+development:
+  bucket: dev_bucket
+  host_alias: dev_bucket.s3.amazon.com
+  credentials:
+    access_key_id: 4DVQZMCFEZWVXTL73PD6
+    secret_access_key: dReL6mrQDKdfstjevFeBOqHprhO9PC38GN5GtVYS
+production:
+  bucket: production_bucket
+  host_alias: production_bucket.s3.amazon.com
+  credentials:
+    access_key_id: GWUDL70DBXGYK0W637NX
+    secret_access_key: Kf8wt75m8drOeP8WfMoNvHcECIe5pDGn6DSYUICv
