@@ -2,6 +2,7 @@ require "best_in_place"
 require "flash_cookie_session"
 require "uploadify-rails"
 
+require "another_uploader/configuration"
 require "another_uploader/engine"
 require "another_uploader/icons"
 require "another_uploader/image_processing"
