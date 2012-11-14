@@ -32,4 +32,8 @@ class ActiveSupport::TestCase
   def assert_remote_file_exists path
     assert self.class.bucket.objects[path].exists?, "Expected #{path} to be uploaded to bucket #{@@bucket}"
   end
+
+  def config
+    AnotherUploader.configuration
+  end
 end
