@@ -12,3 +12,4 @@ test/dummy/config/s3.yml
 *.swp
 \#*\#
 *.gem
+test/dummy/public/system

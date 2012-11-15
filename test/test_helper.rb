@@ -14,6 +14,8 @@ if ActiveSupport::TestCase.method_defined?(:fixture_path=)
   ActiveSupport::TestCase.fixture_path = File.expand_path("../fixtures", __FILE__)
 end
 
+Paperclip.options[:log] = false
+
 class ActiveSupport::TestCase
   fixtures :all
 
