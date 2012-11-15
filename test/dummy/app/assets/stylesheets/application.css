@@ -9,5 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require easy_rails_authentication
+ *= require another_uploader
  *= require_tree .
  */
