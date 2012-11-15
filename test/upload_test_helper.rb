@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class UploadTestHelper < ActiveSupport::TestCase
+module UploadTestHelperModule
   include ActionDispatch::TestProcess
 
   IMAGE = { name: 'lorem-ipsum.jpg', type: 'image/jpeg', size: 54640, fingerprint: "c7620915083b8aefa8780bda998eaa20" }
@@ -12,14 +12,6 @@ class UploadTestHelper < ActiveSupport::TestCase
   NONE = { name: 'lorem-ipsum', type: '', size: 2816, fingerprint: "1ce9b5516c33e853fa1ef05730d57c7d" }
   NON_IMAGE_FILES = [PDF, DOC, MP3, SPREADSHEET, TEXT, NONE]
   ALL_FILES = [IMAGE, PDF, DOC, MP3, SPREADSHEET, TEXT, NONE]
-
-  setup do
-    @upload = Upload.new
-  end
-
-  teardown do
-    Upload.destroy_all
-  end
 
   def fixture_file type
     fixture_file_upload("/files/#{type[:name]}")
@@ -48,5 +40,17 @@ class UploadTestHelper < ActiveSupport::TestCase
 
   def given_s3_is_disabled
     config.enable_s3 = false
+  end
+end
+
+class UploadTestHelper < ActiveSupport::TestCase
+  include UploadTestHelperModule
+
+  setup do
+    @upload = Upload.new
+  end
+
+  teardown do
+    Upload.destroy_all
   end
 end
