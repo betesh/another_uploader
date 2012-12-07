@@ -1,0 +1,22 @@
+<div id='uploadify_icon_div'>
+  <table id='uploadify_icon_table'>
+    <% ['icon', 'name'].each do |attr| %>
+      <tr class="uploadify_<%= attr %>_row"></tr>
+    <% end %>
+  </table>
+</div>
+<br />
+<%= content_tag :div, id: :uploadify_queue_div do %>
+<% end %>
+<br />
+<%= content_tag :div, id: :uploadify_div do %>
+  <p><%= file_field_tag params[:file], size: 25, id: :uploadify_file_field %></p>
+<% end %>
+<script type='text/javascript'>
+  $(document).ready(function() {
+    var uploadify = $('input#uploadify_file_field');
+    uploadify.uploadify(<%= uploadify_rails_options %>);
+    uploadify.show();
+    $('div#uploadify_div').keep_centered();
+  });
+</script>

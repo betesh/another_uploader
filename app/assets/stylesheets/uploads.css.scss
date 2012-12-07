@@ -1,4 +1,12 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+input#uploadify_file_field {
+  display:none;
+}
+div#uploadify_div {
+  display:inline-block;
+}
+div#uploadify_icon_div, div#uploadify_queue_div {
+  padding:6px;
+  border:1px solid #0066CC;
+  text-align:left;
+  display:none;
+}
