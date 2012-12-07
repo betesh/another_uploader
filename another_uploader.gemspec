@@ -16,11 +16,11 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 3.2"
+  s.add_dependency "rails", "~> 3.2.9"
   s.add_dependency "paperclip", "~> 3.3"
   s.add_dependency "aws-sdk", "~> 1.7"
   s.add_dependency "flash_cookie_session", "~> 1.1"
-  s.add_dependency "uploadify-rails", "~> 3.1"
+  s.add_dependency "uploadify-rails", "~> 3.1.1.1"
   s.add_dependency "best_in_place", "~> 2.0"
   # s.add_dependency "jquery-rails"
 
